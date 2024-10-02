@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download SUMUT.mobile</title>
+    <script type="text/javascript">
+        window.onload = function() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            if (/android/i.test(userAgent)) {
+                window.location.href = "https://play.google.com/store/apps/details?id=mbank.sumut";
+            } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                window.location.href = "https://apps.apple.com/us/app/sumut-mobile/id1089844839?l=id";
+            } else {
+                // Default behavior, if device isn't Android or iOS
+                document.getElementById('message').innerHTML = "Please open this link on your mobile device.";
+            }
+        };
+    </script>
+</head>
+<body>
+    <p id="message">Redirecting...</p>
+</body>
+</html>
